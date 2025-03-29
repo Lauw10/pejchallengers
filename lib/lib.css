@@ -1,0 +1,30 @@
+.question.disable.correct .answer.selected {
+background-color: var(--disabled-correct-color);
+border-color: var(--disabled-correct-color);
+ }
+
+ .question.disabled.incorrect .answer.selected {
+    background-color: var(--disabled-incorrect-color);
+    border-color: var(--disabled-incorrect-color);
+ }
+
+ .feedback {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: 500;
+    display: none;
+ }
+
+ .question.correct .feedback, .question.incorrect .feedback {
+    display: inline-block;
+ }
+
+ .question.correct .feedback {
+    color: var(--correct-color);
+ }
+
+ .question.incorrect .feedback {
+    color: var(--incorrect-color);
+ }
+
