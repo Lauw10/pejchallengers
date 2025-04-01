@@ -1,36 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="lib/lib.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="lib/lib.js"></script>
-    <script src="main.js" defer></script>
-    <title>Pej Challenger's</title>
+    <title>Plateforme de Vote en Ligne</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <div id="qcm">
+    <div class="container">
+        <header>
+            <h1>Plateforme de Vote</h1>
+            <p>Veuillez sélectionner votre choix et voter</p>
+        </header>
 
-        <div id="score">Score = 0</div>
-        <h2 id="title">PEJ Challenger's</h2>
-        <div id="question-container">
-            <div class="question">
-                <div class="quest">Questions?</div>
-                <div class="answers">
-                    <div class="answ">Answer</div>
-                    <div class="answ">Answer</div>
-                    <div class="answ">Answer</div>
-                    <div class="answ">Answer</div>
+        <div class="login-section" id="loginSection">
+            <h2>Connexion</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="voterId">Identifiant unique:</label>
+                    <input type="text" id="voterId" required>
                 </div>
-                <div class="feedback"></div>
-            </div>
+                <button type="submit">Se connecter</button>
+            </form>
         </div>
 
+        <div class="vote-section" id="voteSection" style="display:none;">
+            <h2>Options de vote</h2>
+            <div class="options" id="voteOptions">
+                <!-- Les options seront chargées dynamiquement -->
+            </div>
+            <button id="submitVote" disabled>Soumettre le vote</button>
+        </div>
 
+        <div class="confirmation" id="confirmationSection" style="display:none;">
+            <h2>Merci d'avoir voté!</h2>
+            <p>Votre vote a été enregistré avec succès.</p>
+            <button id="viewResults">Voir les résultats</button>
+        </div>
+
+        <div class="results" id="resultsSection" style="display:none;">
+            <h2>Résultats du vote</h2>
+            <div id="resultsChart">
+                <!-- Les résultats seront affichés ici -->
+            </div>
+        </div>
     </div>
 
-
+    <script src="script.js"></script>
 </body>
 </html>
